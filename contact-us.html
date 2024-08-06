@@ -164,6 +164,14 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="number"></label>
+                            <input type="number" class="form-control" id="number" name="number" placeholder="Your Number"
+                                required>
+                            <!--placing icon using a span element-->
+                            <span class="icon fa fa-phone fa-lg"></span>
+                        </div>
+
+                        <div class="form-group">
                             <label for="email"></label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="Your E-mail"
                                 required>
@@ -174,10 +182,12 @@
                             <label for="project-type"></label>
                             <select id="project-type" name="project-type">
                                 <option> Select Project Type</option>
-                                <option value="website_optimization">Website Optimization</option>
-                                <option value="social_media_marketing">Social Media Marketing</option>
-                                <option value="ui/ux">UI/UX</option>
-                                <option value="graphics">Graphics</option>
+                                <option value="company formation">Company formation</option>
+                                <option value="visa processing">visa processing</option>
+                                <option value="attestation">attestation</option>
+                                <option value=" document writing"> document writing</option>
+                                <option value=" legal translation">legal translation</option>
+
                             </select>
                         </div>
 
@@ -189,11 +199,37 @@
 
                         <div class=" text-center">
                             <input type="submit" name="submit" value="Submit" class="btn btn-default">
-                            <!-- <button type="submit" class="btn btn-default">Submit Project Details <i class="fas fa-angle-right"></i> </button> -->
+                            <!-- <button id="btn" type="submit" class="btn btn-default">Submit <i class="fas fa-angle-right"></i> </button> -->
                         </div>
                     </form>
                 </div>
+                <script src="Google Sheet.js">
+                </script>
+                <!-- <script>
+                    var btn = document.getElementById('btn');
+                    btn.addEventListener('click', function(e) {
+                    e.preventDefault()
+                    // console.log('===========')
+                    var name = document.getElementById('name').value;
+                    var email = document.getElementById('email').value;
+                    var subject = document.getElementById('project-type').value;
+                    var message = document.getElementById('msg').value;
+                    var body = 'name: '+name + '<br/> email: '+ email + '<br/>subject: '+subject+ '<br/> message: '+ message;
+                    Email.send({
+         SecureToken : "2db200c2-eecb-4fc5-ab88-4da3a5f5ba7c",
+         To : 'adilthengilan123@gmail.com',
+        From : "tamkinexpress@gmail.com",
+        Subject : "Leads",
+        Body : body
+    }).then(
+    message => alert(message)
+    );
 
+                    })
+
+              -->
+                    </script>
+                    
                 <div class="col-md-6 centralize">
                     <div class="contact-image">
                         <img src="./asset/image/Group 4408.png" alt="" class="img-fluid ml-5">
