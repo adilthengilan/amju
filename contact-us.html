@@ -153,7 +153,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-6">
-                    <form action="" method="post" id="project-details">
+                    <form action="" method="post" id="project-details" name="contact-form">
 
                         <div class="form-group">
                             <label for="name"></label>
@@ -197,38 +197,26 @@
                             <span class="icon-textarea fa fa-edit fa-lg "></span>
                         </div>
 
-                        <div class=" text-center">
-                            <input type="submit" name="submit" value="Submit" class="btn btn-default">
+                        <div class="form-group">
+                            <input type="submit" id="submit" value="Submit" class="btn btn-default">
                             <!-- <button id="btn" type="submit" class="btn btn-default">Submit <i class="fas fa-angle-right"></i> </button> -->
                         </div>
                     </form>
                 </div>
-                <script src="Google Sheet.js">
-                </script>
-                <!-- <script>
-                    var btn = document.getElementById('btn');
-                    btn.addEventListener('click', function(e) {
-                    e.preventDefault()
-                    // console.log('===========')
-                    var name = document.getElementById('name').value;
-                    var email = document.getElementById('email').value;
-                    var subject = document.getElementById('project-type').value;
-                    var message = document.getElementById('msg').value;
-                    var body = 'name: '+name + '<br/> email: '+ email + '<br/>subject: '+subject+ '<br/> message: '+ message;
-                    Email.send({
-         SecureToken : "2db200c2-eecb-4fc5-ab88-4da3a5f5ba7c",
-         To : 'adilthengilan123@gmail.com',
-        From : "tamkinexpress@gmail.com",
-        Subject : "Leads",
-        Body : body
-    }).then(
-    message => alert(message)
-    );
+                <script src="Google Sheet.js"></script>
 
-                    })
+                <script>
+                    const scriptURL ='https://script.google.com/macros/s/AKfycbxSgJW29b_i_Gk8VpDBmwYDPrnpE9n_wuZI_DcWi3HP-RMheIxE7x_YjMJVtgA2oVSHIQ/exec'
+const form = document.forms['contact-form']
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+.then(response => alert("Thank you! your form is submitted successfully." ))
+.then(() => { window.location.reload(); })
+.catch(error => console.error('Error!', error.message))
+})
 
-              -->
-                    </script>
+                  </script>
                     
                 <div class="col-md-6 centralize">
                     <div class="contact-image">
