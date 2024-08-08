@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./asset/css/service-details.css">
+    <link rel="stylesheet" href="./chatbox.css">
+
     <style>
 
         @media (max-width: 768px) { 
@@ -44,8 +46,8 @@
                             <div class="collapse navbar-collapse" id="beeToggler">
                                 <ul class="navbar-nav ml-auto ">
                                     <li><a href="./index.html">Home</a></li>
-                                    &nbsp;
-                                    <li><a href="./project.html">Project</a></li>
+                                    <!-- &nbsp;
+                                    <li><a href="./project.html">Project</a></li> -->
                                     &nbsp;
                                     <li><a href="./service.html">Service</a></li>
                                     &nbsp;
@@ -61,7 +63,7 @@
                                     &nbsp; -->
                                     <li>
                                         <a href="#">
-                                        <button class="nav-button">Check Your Case Status <i class="fas fa-angle-right"></i> </button>
+                                        <button class="nav-button">Check Your Case ID <i class="fas fa-angle-right"></i> </button>
                                         </a>
                                     </li>
                                 </ul>
@@ -343,7 +345,66 @@
             </div>
         </section>
     <!-- Footer End  -->
-    
+    <Section  class="chatbox-wrapper">
+        <div id="click" class="chatbox-toggle">
+            <i class='fas fa-robot'></i>
+        </div>
+        <div class="chatbox-message-wrapper">
+            <div class="chatbox-message-header">
+                <div class="chatbox-message-profile">
+                    <img src="asset\image\1 (2).png" alt="" class="chatbox-message-image">
+                    <div>
+                        <h4 class="chatbox-message-name">TamkinExpress</h4>
+                        <p class="chatbox-message-status">online</p>
+                    </div>
+                </div>
+                <div class="chatbox-message-dropdown">
+                    <i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+                    <ul class="chatbox-message-dropdown-menu">
+                        <li>
+                            <a href="#">Search</a>
+                        </li>
+                        <li>
+                            <a href="#">Report</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chatbox-message-content">
+                <h4 class="chatbox-message-no-message"></h4>
+                <!-- <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+                    </span>
+                    <span class="chatbox-message-item-time">08:30</span>
+                </div>
+                <div class="chatbox-message-item received">
+                    <span class="chatbox-message-item-text">
+                        Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+                    </span>
+                    <span class="chatbox-message-item-time">08:30</span>
+                </div> -->
+            </div>
+            <div class="chatbox-message-bottom">
+                <form action="#" class="chatbox-message-form" name="chat-form">
+                    <textarea cols="40" rows="1" placeholder="Type message..." class="chatbox-message-input" id="name" name="name"></textarea>
+                    <button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+                </form>
+            </div>
+        </div>
+        <script>
+            const scriptURL ='https://script.google.com/macros/s/AKfycbxSgJW29b_i_Gk8VpDBmwYDPrnpE9n_wuZI_DcWi3HP-RMheIxE7x_YjMJVtgA2oVSHIQ/exec'
+const form = document.forms['chat-form']
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+.then(response => alert("Thank you! your form is submitted successfully." ))
+.then(() => { window.location.reload(); })
+.catch(error => console.error('Error!', error.message))
+})
+
+          </script>
+    </Section>
     
         <!--Adding Scripts-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
