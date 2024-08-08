@@ -107,6 +107,11 @@ function autoReply() {
 	chatboxMessageWrapper.insertAdjacentHTML('beforeend', message)
 	scrollBottom()
 }
+function clean(){
+    chatboxMessageWrapper.remove()
+
+}
+
 function autoReply1() {
 	const today = new Date()
 	let message = `
@@ -122,6 +127,7 @@ function autoReply1() {
 }
 
 function autoReply2() {
+
 	const today = new Date()
 	let message = `
 		<div class="chatbox-message-item received">

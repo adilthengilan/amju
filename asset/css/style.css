@@ -36,8 +36,8 @@ a:hover{
     min-height: 90px;
 }
 .navbar-brand img{
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 90px;
 }
 .main-menu ul li{
     margin-left: 26px;
@@ -74,8 +74,8 @@ button.nav-button{
 }
 .left-content h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 60px;
-    font-weight: 500;
+    font-size: 70px;
+    font-weight: 600;
     color: #070A57;
 }
 .centralize{
@@ -84,9 +84,16 @@ button.nav-button{
 }
 .left-content p {
     font-family: 'Roboto',sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
-    color: #64707D;
+    color: #000000;
+}
+.left-content p1 {
+    padding-left: 250px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 18px;
+    font-weight: 550;
+    color: #000000;
 }
 .call-to-action button {
     background: #FFBA00;
@@ -105,15 +112,15 @@ button.nav-button{
     margin-left: 30px;
 }
 .right-content img{
-    width: 70%;
-    padding-left: 30px;
+    width: 3000px;
+    padding-left: 100px;
 }
 
 /* Work process syles */
 
 .process-block {
     text-align: center;
-    padding: 10px;
+    padding: 50px;
 }
 
 .process-block img {
@@ -121,7 +128,7 @@ button.nav-button{
     border: 2px dotted #FFBA00;
     padding: 15px 20px;
     border-radius: 8px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .process-block p {
@@ -137,7 +144,7 @@ button.nav-button{
     font-weight: 500;
 }
 .project-discussion{
-    margin-left: 30px;
+    margin-left: 10px;
 }
 .project-discussion h2 {
     font-family: 'Roboto',sans-serif;
@@ -228,7 +235,7 @@ button.nav-button{
 }
 .service-card p{
 	font-family:'Roboto',sans-serif;
-	font-size:18px;
+	font-size:20px;
 	color:#64707D;
 }
 .service-card a{
