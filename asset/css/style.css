@@ -127,7 +127,7 @@ button.nav-button{
     background: #FBF5E5;
     border: 2px dotted #FFBA00;
     padding: 15px 20px;
-    border-radius: 8px;
+    border-radius: 120px;
     /* margin-bottom: 15px; */
 }
 
@@ -141,7 +141,7 @@ button.nav-button{
 .process-block h3 {
     font-family: 'Roboto',sans-serif;
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .project-discussion{
     margin-left: 10px;
@@ -582,15 +582,15 @@ section.header.contact-header {
 
 .blog-content h2.blog-title {
 	font-family: 'Roboto',sans-serif;
-	font-size: 26px;
-	font-weight: 500;
-	color: #FFBA00;
+	font-size: 28px;
+	font-weight: 600;
+	color: #000000;
 	line-height: 35px;
 	}
 
 .blog-content p.blog-exercpt {
-	font-family: 'Roboto',sans-serif;
-	font-size: 18px;
+	font-family: 'Roboto',serif;
+	font-size: 20px;
 	line-height: 35px;
 	color: #64707D;
 	}
